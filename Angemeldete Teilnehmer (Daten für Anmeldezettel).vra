@@ -1,0 +1,240 @@
+Tabelle Version 2.0
+
+[Layout]
+Breite=210
+Höhe=297
+Hochformat=0
+Links=10
+Rechts=10
+Oben=10
+Unten=10
+
+Datum=1
+Seitenzahlen=1
+Laufende Nummer=1
+Gitternetzlinien=1
+Dateiname in Fußzeile=1
+Gleiche Felder untereinander=1
+
+[Datenbank]
+Container=COMPersonen
+
+[Gruppierung]
+Gruppenwechsel=
+Gruppenüberschrift=
+Gruppenfuß=
+Seitenwechsel=0
+lfdGruppenwechsel=0
+
+[SubFilter] 71
+COMPTelefone=[Anschluss (Nr).Nummer] = 7 || [Anschluss (Nr).Nummer] = 1
+Welche=1
+Wieviele=0
+Haupt=4
+
+[SubFilter] 118
+COMPersonen=EingabeSuchen("Zahl","Welche Veranstaltung (Nr. ggf. auf Suchen klicken)",0,"COMVeranstaltungen","Nummer")
+Welche=0
+Wieviele=0
+Haupt=0
+
+[SubFilter] 93
+COMQElternTelefone=[Eltern Anschluss (Nr).Nummer] == 7 || [Eltern Anschluss (Nr).Nummer] == 9
+Welche=1
+Wieviele=0
+Haupt=4
+
+[SubFilter] 88
+COMVeranTeilnehmer=[Teilnahme (Nr).Nummer] = 1 && [Veranstaltung (Nr).Nummer] = Input(0)
+Welche=1
+Wieviele=0
+Haupt=5
+
+[Feld]
+Name=Vorname
+NeuName=Vorname
+Unterschrift=
+Linksbündig=1
+Ausblenden=1
+Summe=0
+Gruppensumme=0
+Währung=0
+WährungNull=0
+Breite=0
+Leer=
+
+[Feld]
+Name=Name
+NeuName=Name
+Unterschrift=
+Linksbündig=1
+Ausblenden=1
+Summe=0
+Gruppensumme=0
+Währung=0
+WährungNull=0
+Breite=0
+Leer=
+
+[Feld]
+Name=Adressanrede (Nr).Adressanrede
+NeuName=Anrede
+Unterschrift=
+Linksbündig=1
+Ausblenden=1
+Summe=0
+Gruppensumme=0
+Währung=0
+WährungNull=0
+Breite=0
+Leer=
+
+[Feld]
+Name=Straße/Postfach
+NeuName=Adresse
+Unterschrift=
+Linksbündig=1
+Ausblenden=1
+Summe=0
+Gruppensumme=0
+Währung=0
+WährungNull=0
+Breite=0
+Leer=
+
+[Feld]
+Name=PLZ
+NeuName=PLZ
+Unterschrift=
+Linksbündig=1
+Ausblenden=1
+Summe=0
+Gruppensumme=0
+Währung=0
+WährungNull=0
+Breite=0
+Leer=
+
+[Feld]
+Name=Ort
+NeuName=Ort
+Unterschrift=
+Linksbündig=1
+Ausblenden=1
+Summe=0
+Gruppensumme=0
+Währung=0
+WährungNull=0
+Breite=0
+Leer=
+
+[Feld]
+Name=Briefanrede (Nr).Briefanrede
+NeuName=Briefanrede
+Unterschrift=
+Linksbündig=1
+Ausblenden=1
+Summe=0
+Gruppensumme=0
+Währung=0
+WährungNull=0
+Breite=0
+Leer=
+
+[Feld]
+Name=Kennung1
+NeuName=Essen
+Unterschrift=
+Linksbündig=1
+Ausblenden=0
+Summe=0
+Gruppensumme=0
+Währung=0
+WährungNull=0
+Breite=0
+Leer=
+
+[Feld]
+Name=Kennung2
+NeuName=Allergien
+Unterschrift=
+Linksbündig=1
+Ausblenden=0
+Summe=0
+Gruppensumme=0
+Währung=0
+WährungNull=0
+Breite=0
+Leer=
+
+[Feld]
+Name=COMVeranTeilnehmer.Bemerkung
+NeuName=Bemerkung
+Unterschrift=
+Linksbündig=1
+Ausblenden=0
+Summe=0
+Gruppensumme=0
+Währung=0
+WährungNull=0
+Breite=0
+Leer=
+
+[Feld]
+Name=COMPTelefone.Telefon
+NeuName=Komm_K
+Unterschrift=
+Linksbündig=1
+Ausblenden=1
+Summe=0
+Gruppensumme=0
+Währung=0
+WährungNull=0
+Breite=0
+Leer=
+
+[Feld]
+Name=COMQElternTelefone.Eltern Telefon
+NeuName=Komm_E
+Unterschrift=
+Linksbündig=1
+Ausblenden=1
+Summe=0
+Gruppensumme=0
+Währung=0
+WährungNull=0
+Breite=0
+Leer=
+
+[Feld]
+Name=Serienbrief E-Mail Adresse
+NeuName=E-Mail_K
+Unterschrift=
+Linksbündig=1
+Ausblenden=1
+Summe=0
+Gruppensumme=0
+Währung=0
+WährungNull=0
+Breite=0
+Leer=
+
+[Sortieren] 19
+Name	H
+Vorname	H
+
+[Schriftart]
+Name=Arial
+Größe=9
+Farbe=-1
+
+[Überschrift]
+Kette("Angemeldet zu: ", Bezeichnung("COMVeranstaltungen", Input(0)))
+
+[Hauptüberschrift]
+Vereinsname()
+
+[Hilfe] 205
+Liste aller zu einer Veranstaltung angemeldeten Teilnehmer.
+
+Weitere Informationen: Allergien, Nahrungswünsche, Bemerkungen (bei der Veranstaltung eingetragen), Handynummer Kind, Kontaktdaten der Eltern.
