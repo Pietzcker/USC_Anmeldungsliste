@@ -25,6 +25,7 @@ win32clipboard.OpenClipboard()
 data = win32clipboard.GetClipboardData()
 win32clipboard.CloseClipboard()
 
+
 if not data.startswith("lfd. Nr.\t"):
     print("Fehler: Unerwarteter Inhalt der Zwischenablage!")
     exit()
@@ -36,8 +37,8 @@ with io.StringIO(data) as infile:
 
 def komm_typ(item):
     if "@" in item: return ("E-Mail", item)
-    if item.startswith("01"): return ("Mobil", item)
-    if item.startswith("0"): return ("Festnetz", item)
+    if item.strip().startswith("01"): return ("Mobil", item)
+    if item.strip().startswith("0"): return ("Festnetz", item)
     raise ValueError(f"Ungültiger Eintrag in {item}\n(Telefonnummern müssen mit 0 beginnen, Mails müssen ein @ enthalten)")
 
 # Zunächst alle Daten systematisch zusammenfassen pro Kind,
@@ -126,4 +127,4 @@ with open(f"Anmeldeliste_{heute}.csv", mode="w", newline="", encoding="cp1252") 
             output.writerow(datensatz)
             
         
-print(f"Fertig! Die Datei Anmeldeliste_{heute}.csv wurde im aktuellen Ordner abgelegt.")
+input(f"Fertig! Die Datei Anmeldeliste_{heute}.csv wurde im aktuellen Ordner abgelegt.\nENTER drücken zum Beenden.")
